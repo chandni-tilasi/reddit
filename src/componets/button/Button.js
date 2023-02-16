@@ -44,7 +44,7 @@ const Button = styled.button`
     line-height: 17px;
     text-transform: unset;
     padding: 4px 16px;
-    
+    margin-left:10px
    
     
 

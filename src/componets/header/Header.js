@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Button from "../button/Button";
 import Logo from "../logo/Logo";
+import Avatar from "../avatar/Avatar";
 const Head = styled.header`
   display: flex;
   height: 70px;
@@ -16,6 +17,7 @@ function Header() {
       <Head>
         <Logo src="https://external-preview.redd.it/iDdntscPf-nfWKqzHRGFmhVxZm4hZgaKe5oyFws-yzA.png?auto=webp&s=38648ef0dc2c3fce76d5e1d8639234d8da0152b2" />
 
+        <div style={{display:"flex" ,justifyContent:"space-around" }}>
         <Button
           height={`${40}px`}
           width={`${100}px`}
@@ -26,6 +28,8 @@ function Header() {
         >
           Login
         </Button>
+        <Avatar />
+        </div>
       </Head>
     </>
   );
