@@ -1,12 +1,12 @@
 import Header from "./components/header/Header";
-import Card from "./components/card/Card";
+import Main from "./components/main/Main";
 
 
 const App = () => {
   return (
     <>
       <Header />
-      <Card />
+      <Main />
     </>
   );
 };
