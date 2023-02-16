@@ -1,14 +1,6 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-.app-container{
-  height: 100vh;
-  background-color: #DAE0E6;
-}
-
-button:hover{
-opacity: 0.7;
+  background-color: #dae0e6;
 }
