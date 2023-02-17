@@ -4,6 +4,7 @@ import Logo from "../logo/Logo";
 import Avatar from "../avatar/Avatar";
 import logoImage from "../../assets/logo.png";
 import avatarImage from "../../assets/avatar.png";
+import {Link} from "react-router-dom"
 
 const Div = styled.div`
   display: flex;
@@ -36,7 +37,7 @@ const HeaderContainer = () => {
           fontSize={"16px"}
           hover={"0.7"}
         >
-          Log In{" "}
+          <Link to="./signin" >sign in</Link>
         </Button>
         <Avatar src={avatarImage} alt="Avatar" ml={"20px"} />
       </Div>

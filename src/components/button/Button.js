@@ -67,6 +67,12 @@ const Button = styled.button`
         opacity: ${props.hover};
       `};
   }
+
+  ${(props) =>
+    props.opacity &&
+    css`
+      opacity: ${props.opacity};
+    `};
 `;
 
 

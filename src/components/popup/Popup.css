@@ -1,0 +1,59 @@
+.popupContainer {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: 400px;
+  font-size: 20px;
+  border-radius: 10px;
+  justify-content: space-between;
+  padding: 10px;
+  position: absolute;
+  left: 500px;
+  top: 150px;
+  border: 1px gray solid;
+}
+
+.formContainer {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  /* margin-top: 10px; */
+}
+.formContainer textarea {
+  width: 350px;
+  height: 80px;
+  padding: 5px;
+ 
+  border-radius: 10px;
+}
+
+textarea:focus {
+  border-color: #ff4500;
+}
+
+.mainHeading {
+  font-size: 25px;
+  margin-left: 20px;
+
+} 
+
+.file {
+  margin-top: 10px;
+}
+.btn {
+  cursor: pointer;
+  font-weight: bold;
+  height: 35px;
+  width: 90px;
+  font-size: 16px;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  background-color: #ff4500;
+  margin-left: 5px;
+}
+
+.btnContainer {
+  margin-left: 20px;
+}

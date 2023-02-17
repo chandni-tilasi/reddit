@@ -4,5 +4,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #dae0e6;
+  /* background-color: #dae0e6; */
+}
+
+a{
+  text-decoration: none;
+  color: white;
 }
