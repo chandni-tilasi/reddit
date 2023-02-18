@@ -4,7 +4,10 @@ import Button from "../button/Button";
 import Popup from "../popup/Popup";
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import "./main.css"
+// import { BiDownvote, BiUpvote } from "react-icons/bi";
+import "./main.css";
+import Post from "../post/Post";
+
 const Main = styled.article`
   width: 100vw;
   display: flex;
@@ -18,9 +21,10 @@ const Main = styled.article`
 const MainContainer = (props) => {
   const [clicked, seClicked] = useState(false);
   const [cancel, setCancel] = useState(false);
-
-  const value = useSelector((state) => state.post);
-  console.log(value);
+  // const [upvotes, setUpvotes] = useState(0);
+  // const [downvotes, setDownvotes] = useState(0);
+  const post = useSelector((state) => state.post);
+  
   function clickHandle() {
     seClicked(!clicked);
     // setCancel(false);
@@ -56,17 +60,18 @@ const MainContainer = (props) => {
         create post
       </Button>
       {/* )} */}
+
       <div>
-        {value.length >= 1 ? (
-          value.map((post) => {
+        {post.length >= 1 ? (
+          post.map((post, index) => {
             return (
-              <Card>
-                <div className="postContainer">
-                  
-                  <img src={post.img} />
-                  <p>{post.title}</p>
-                </div>
-              </Card>
+              <Post
+                key={index}
+                title={post.title}
+                img={post.img}
+                likes={0}
+                dislikes={0}
+              />
             );
           })
         ) : (

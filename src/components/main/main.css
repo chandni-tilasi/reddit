@@ -13,3 +13,14 @@
     height: 500px;
 
 }
+
+.upvotes{
+    display: flex;
+    flex-direction: column;
+}
+
+.upvotes span{
+    display: flex;
+    margin-top: 10px;
+    
+}

@@ -1,9 +1,7 @@
-
 import React, { useState } from "react";
-import Card from "../card/Card";
 import "./Popup.css";
 import { add } from "../../store/PostSlice";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 
 function Popup() {
   const [clickedSave,setClickedSave] = useState(false)
@@ -14,8 +12,7 @@ function Popup() {
   let idx = 0;
 
   const uploadData = () => {
-    // setData([...data, { title, img: URL.createObjectURL(imgVal), idx: idx++ }]);
-    disPatch(add({ title, img: URL.createObjectURL(imgVal), idx: idx++ }));
+ disPatch(add({ title, img: URL.createObjectURL(imgVal), idx: idx++ }));
     setClickedSave(true)
     setImgVal("");
     setTitle("");
@@ -28,7 +25,7 @@ function Popup() {
 
       <form className="formContainer">
         <span className="subHeading">Post title</span>
-        <textarea
+        <textarea 
           placeholder="write here..."
           onChange={(e) => {
             setTitle(e.target.value);

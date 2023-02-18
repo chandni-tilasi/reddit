@@ -24,7 +24,7 @@
   width: 350px;
   height: 80px;
   padding: 5px;
- 
+  resize: none;
   border-radius: 10px;
 }
 
@@ -35,8 +35,7 @@ textarea:focus {
 .mainHeading {
   font-size: 25px;
   margin-left: 20px;
-
-} 
+}
 
 .file {
   margin-top: 10px;
