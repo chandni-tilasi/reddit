@@ -4,15 +4,18 @@ import Logo from "../logo/Logo";
 import Avatar from "../avatar/Avatar";
 import logoImage from "../../assets/logo.png";
 import avatarImage from "../../assets/avatar.png";
-import {Link,useNavigate} from "react-router-dom"
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
-import { toast } from "react-toastify/dist/components";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { toast } from "react-toastify";
+import { setUserLoggedIn } from "../../store/userSlice";
+
+
 
 const Div = styled.div`
   display: flex;
   justify-content: space-between;
-  // align-items: center;
+  align-items: center;
   background-color: inherit;
   margin-right: 20px;
 `;
@@ -23,9 +26,7 @@ const Header = styled.header`
   align-items: center;
   height: 70px;
   width: 100vw;
-  background-color: #ecf2ff;
-  // position:absolute;
-  // top:0;
+  background-color: #ffffff;
 `;
 const HeaderContainer = () => {
   const navigate = useNavigate();
@@ -41,20 +42,37 @@ const HeaderContainer = () => {
   return (
     <Header>
       <Logo src={logoImage} alt="Logo" />
-      
       <Div>
-        <Button
-          height={"40px"}
-          width={"100px"}
-          backgroundColor={"#ff4500"}
-          borderRadius={"20px"}
-          border={"none"}
-          fontColor={"white"}
-          fontSize={"16px"}
-          hover={"0.7"}
-        >
-          <Link to="./signin" >sign in</Link>
-        </Button>
+        {!user ?
+          (<Button
+            height={"40px"}
+            width={"100px"}
+            backgroundColor={"#ff4500"}
+            borderRadius={"20px"}
+            border={"none"}
+            fontColor={"white"}
+            fontSize={"16px"}
+            hover={"0.7"}
+          >
+            <Link to="./register">SIGN UP</Link>
+          </Button>)
+          : (<Button
+            height={"40px"}
+            width={"100px"}
+            backgroundColor={"#ff4500"}
+            borderRadius={"20px"}
+            border={"none"}
+            fontColor={"white"}
+            fontSize={"16px"}
+            hover={"0.7"}
+            onClick={() => {
+              navigate("/signin");
+              dispatch(setUserLoggedIn(false));
+              showToastMessage();
+            }}
+          >
+            <Link to="./">LOG OUT</Link>
+          </Button>)}
         <Avatar src={avatarImage} alt="Avatar" ml={"20px"} />
       </Div>
     </Header>
