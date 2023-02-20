@@ -8,10 +8,12 @@ function Post(props) {
 
   const handleLike = () => {
     setLikes(likes + 1);
+    console.log("like");
   };
 
   const handleDislike = () => {
     setDislikes(dislikes + 1);
+    console.log("dislike");
   };
 
   return (

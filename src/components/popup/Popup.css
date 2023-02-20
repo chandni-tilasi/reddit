@@ -17,7 +17,15 @@
   z-index: 999;
   
 }
-
+.form-container {
+    
+  margin: 0 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 300px;
+  height: 220px;
+}
 .formContainer {
   padding: 20px;
   display: flex;
@@ -25,7 +33,7 @@
   /* margin-top: 10px; */
 }
 .formContainer textarea {
-  width: 350px;
+  width: 250px;
   height: 80px;
   padding: 5px;
   resize: none;
@@ -56,6 +64,7 @@ textarea:focus {
   border-radius: 8px;
   background-color: #ff4500;
   margin-left: 5px;
+  margin-top: 10px;
 }
 
 .btnContainer {

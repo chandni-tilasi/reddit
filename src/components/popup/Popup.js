@@ -24,9 +24,9 @@ function Popup() {
       className="popupContainer"
       style={{ display: clickedSave || clickedCancel ? "none" : "block" }}
     >
-      <span className="mainHeading">Add new post</span>
+      {/* <span className="mainHeading">Add new post</span> */}
 
-      <form className="formContainer">
+      <form className="formContainer form-container">
         <span className="subHeading">Post title</span>
         <textarea
           placeholder="write here..."
