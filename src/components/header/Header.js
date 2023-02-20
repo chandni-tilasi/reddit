@@ -9,6 +9,11 @@ import { useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import { setUserLoggedIn } from "../../store/userSlice";
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 0d6c0899ec971da7d67acc6ecf25b245e8a0dafb
 
 const Div = styled.div`
   display: flex;
@@ -24,7 +29,11 @@ const Header = styled.header`
   align-items: center;
   height: 70px;
   width: 100vw;
+<<<<<<< HEAD
   background-color: #ecf2ff;
+=======
+  background-color: #ffffff;
+>>>>>>> 0d6c0899ec971da7d67acc6ecf25b245e8a0dafb
 `;
 const HeaderContainer = () => {
   const navigate = useNavigate();
@@ -41,8 +50,13 @@ const HeaderContainer = () => {
     <Header>
       <Logo src={logoImage} alt="Logo" />
       <Div>
+<<<<<<< HEAD
         {!user ? (
           <Button
+=======
+        {!user ?
+          (<Button
+>>>>>>> 0d6c0899ec971da7d67acc6ecf25b245e8a0dafb
             height={"40px"}
             width={"100px"}
             backgroundColor={"#ff4500"}
@@ -53,9 +67,14 @@ const HeaderContainer = () => {
             hover={"0.7"}
           >
             <Link to="./register">SIGN UP</Link>
+<<<<<<< HEAD
           </Button>
         ) : (
           <Button
+=======
+          </Button>)
+          : (<Button
+>>>>>>> 0d6c0899ec971da7d67acc6ecf25b245e8a0dafb
             height={"40px"}
             width={"100px"}
             backgroundColor={"#ff4500"}
@@ -71,9 +90,14 @@ const HeaderContainer = () => {
             }}
           >
             <Link to="./">LOG OUT</Link>
+<<<<<<< HEAD
           </Button>
         )}
         {/* <Avatar src={avatarImage} alt="Avatar" ml={"20px"} /> */}
+=======
+          </Button>)}
+        <Avatar src={avatarImage} alt="Avatar" ml={"20px"} />
+>>>>>>> 0d6c0899ec971da7d67acc6ecf25b245e8a0dafb
       </Div>
     </Header>
   );
