@@ -4,7 +4,7 @@ const Card = styled.article`
   // margin-left: 250px;
   // margin-top: 30px;
   height: 80vh;
-  width: 60vw;
+  width: 50vw;
   display:flex;
   background-color: #ECF2FF;
   border-radius: 5px;
