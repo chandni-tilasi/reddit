@@ -35,7 +35,6 @@ const MainContainer = (props) => {
   // }
 
   return (
-    // <Main opacity={clicked?0.4:1} >
     <Main>
       <div style={{ display: cancel ? "none" : "block" }}>
         {clicked ? <Popup /> : <></>}
