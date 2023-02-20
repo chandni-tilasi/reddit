@@ -4,9 +4,7 @@ import Logo from "../logo/Logo";
 import Avatar from "../avatar/Avatar";
 import logoImage from "../../assets/logo.png";
 import avatarImage from "../../assets/avatar.png";
-// import { Link } from "react-router-dom";
-
-import Main from "../main/Main";
+import {Link} from "react-router-dom"
 
 const Div = styled.div`
   display: flex;
@@ -27,12 +25,21 @@ const Header = styled.header`
   // top:0;
 `;
 const HeaderContainer = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const user = useSelector((state) => state.user.isLoggedIn);
+
+  const showToastMessage = () => {
+    toast.success("Log Out Success !", {
+      position: toast.POSITION.TOP_RIGHT,
+    });
+  };
+
   return (
     <Header>
       <Logo src={logoImage} alt="Logo" />
       
       <Div>
-        
         <Button
           height={"40px"}
           width={"100px"}
@@ -43,11 +50,8 @@ const HeaderContainer = () => {
           fontSize={"16px"}
           hover={"0.7"}
         >
-          <a style={{ backgroundColor: "#ff4500" }} href="./signin">
-            sign in
-          </a>
+          <Link to="./signin" >sign in</Link>
         </Button>
-
         <Avatar src={avatarImage} alt="Avatar" ml={"20px"} />
       </Div>
     </Header>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Popup.css";
 import { add } from "../../store/PostSlice";
 import { useDispatch } from "react-redux";

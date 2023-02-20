@@ -1,26 +1,29 @@
 import Header from "./components/header/Header";
 import Main from "./components/main/Main";
-import Popup from "./components/popup/Popup";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Signin from "./components/signInUp/SignIn";
-import Signup from "./components/signInUp/SignUp";
+import SignIn from "./components/signInUp/SignIn";
+import SignUp from "./components/signInUp/SignUp";
+import { useDispatch, useSelector } from "react-redux";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const App = () => {
+  const dispatch = useDispatch();
+  const user = useSelector((state) => state.user.isLoggedIn);
+
   return (
     <>
       <Router>
         <Header />
-       
+
         <Routes>
           <Route path="/signin" element={<Signin />} />
-          <Route path="/" element={<Main/>} />
         </Routes>
-        
+        <Main />
       </Router>
 
       
-      {/* <div className="cardContainer"> <div style={{backgroundColor:"#ffffff"}} className="card"></div> </div> */}
-
-      
+      {/* <Signup /> */}
     </>
   );
 };

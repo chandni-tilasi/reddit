@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import Card from "../card/Card";
 import Button from "../button/Button";
 import Popup from "../popup/Popup";
 import { useState } from "react";
