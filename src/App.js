@@ -17,18 +17,6 @@ const App = () => {
         <Header />
 
         <Routes>
-<<<<<<< HEAD
-          <Route path="/signin" element={<Signin />} />
-          <Route path="/" element={<Main/>} />
-        </Routes>
-        
-      </Router>
-
-      
-      {/* <div className="cardContainer"> <div style={{backgroundColor:"#ffffff"}} className="card"></div> </div> */}
-
-      
-=======
           <Route path="/signin" element={<SignIn />} />
         </Routes>
         <Routes>
@@ -40,7 +28,6 @@ const App = () => {
       </Router>
 
       {/* <Signup /> */}
->>>>>>> d06720d5973a2e6fe3f8a743231ee331fea5e8e6
     </>
   );
 };

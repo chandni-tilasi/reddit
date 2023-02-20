@@ -4,7 +4,10 @@ import Logo from "../logo/Logo";
 import Avatar from "../avatar/Avatar";
 import logoImage from "../../assets/logo.png";
 import avatarImage from "../../assets/avatar.png";
-import {Link} from "react-router-dom"
+import {Link,useNavigate} from "react-router-dom"
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { toast } from "react-toastify/dist/components";
 
 const Div = styled.div`
   display: flex;
