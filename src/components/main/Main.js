@@ -3,8 +3,9 @@ import Card from "../card/Card";
 import Button from "../button/Button";
 
 const Main = styled.article`
-  width: 100vw;
+  width: 80vw;
   display: flex;
+  justify-content: space-around;
 `;
 
 const MainContainer = () => {
@@ -18,7 +19,6 @@ const MainContainer = () => {
                 border={"none"}
                 borderRadius={"30px"}
                 mt={"30px"}
-                ml={"30px"}
                 hover={"0.7"}
                 fontSize={"16px"}
             >
