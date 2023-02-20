@@ -1,5 +1,4 @@
 import styled, { css } from "styled-components";
-import Card from "../card/Card";
 import Button from "../button/Button";
 import Popup from "../popup/Popup";
 import { useState } from "react";
@@ -24,7 +23,7 @@ const MainContainer = (props) => {
   // const [upvotes, setUpvotes] = useState(0);
   // const [downvotes, setDownvotes] = useState(0);
   const post = useSelector((state) => state.post);
-  
+
   function clickHandle() {
     seClicked(!clicked);
     // setCancel(false);

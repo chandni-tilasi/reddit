@@ -16,8 +16,6 @@ function Post(props) {
 
   return (
     <Card>
-      
-
       <div className="upvotes">
         <span>
           <BiUpvote size="30px" onClick={handleLike} />
@@ -30,7 +28,7 @@ function Post(props) {
       </div>
       <div className="postContainer">
         <h2>{props.title}</h2>
-        <img src={props.img} />
+        <img src={props.img} alt="" />
       </div>
     </Card>
   );

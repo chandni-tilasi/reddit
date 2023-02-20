@@ -4,7 +4,13 @@ import Logo from "../logo/Logo";
 import Avatar from "../avatar/Avatar";
 import logoImage from "../../assets/logo.png";
 import avatarImage from "../../assets/avatar.png";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { toast } from "react-toastify";
+import { setUserLoggedIn } from "../../store/userSlice";
+
+
 
 const Div = styled.div`
   display: flex;
@@ -23,22 +29,50 @@ const Header = styled.header`
   background-color: #ffffff;
 `;
 const HeaderContainer = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const user = useSelector((state) => state.user.isLoggedIn);
+
+  const showToastMessage = () => {
+    toast.success("Log Out Success !", {
+      position: toast.POSITION.TOP_RIGHT,
+    });
+  };
+
   return (
     <Header>
       <Logo src={logoImage} alt="Logo" />
       <Div>
-        <Button
-          height={"40px"}
-          width={"100px"}
-          backgroundColor={"#ff4500"}
-          borderRadius={"20px"}
-          border={"none"}
-          fontColor={"white"}
-          fontSize={"16px"}
-          hover={"0.7"}
-        >
-          <Link to="./signin" >sign in</Link>
-        </Button>
+        {!user ?
+          (<Button
+            height={"40px"}
+            width={"100px"}
+            backgroundColor={"#ff4500"}
+            borderRadius={"20px"}
+            border={"none"}
+            fontColor={"white"}
+            fontSize={"16px"}
+            hover={"0.7"}
+          >
+            <Link to="./register">SIGN UP</Link>
+          </Button>)
+          : (<Button
+            height={"40px"}
+            width={"100px"}
+            backgroundColor={"#ff4500"}
+            borderRadius={"20px"}
+            border={"none"}
+            fontColor={"white"}
+            fontSize={"16px"}
+            hover={"0.7"}
+            onClick={() => {
+              navigate("/signin");
+              dispatch(setUserLoggedIn(false));
+              showToastMessage();
+            }}
+          >
+            <Link to="./">LOG OUT</Link>
+          </Button>)}
         <Avatar src={avatarImage} alt="Avatar" ml={"20px"} />
       </Div>
     </Header>

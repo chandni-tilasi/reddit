@@ -1,44 +1,63 @@
-import react, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+
+
+import { useState } from "react";
 import "./SignInUp.css";
-const Signup = () => {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [confirmPassword, setConfirmPassword] = useState("");
-  
-    const handleSubmit = (e) => {
-      e.preventDefault();
-      // TODO: add logic to submit the form
-    };
-  
-    return (
-      <div className="form-container">
-        <h2>Sign Up</h2>
-        <form onSubmit={handleSubmit}>
-          <label>Email:</label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            className="input-field"
-          />
-          <label>Password:</label>
-          <input
-            type="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            className="input-field"
-          />
-          <label>Confirm Password:</label>
-          <input
-            type="password"
-            value={confirmPassword}
-            onChange={(e) => setConfirmPassword(e.target.value)}
-            className="input-field"
-          />
-          <button type="submit" className="submit-button">Sign Up</button>
-        </form>
-      </div>
-    );
+
+const SignUp = () => {
+  const [id, setId] = useState("");
+  const [password, setPassword] = useState("");
+  const navigate = useNavigate();
+
+  const showToastMessage = () => {
+    toast.success("Account is Created !", {
+      position: toast.POSITION.TOP_RIGHT,
+    });
   };
 
-  export default Signup
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    // TODO: add logic to submit the form
+    e.preventDefault();
+    localStorage.setItem("id", id);
+    localStorage.setItem("password", password);
+    console.log("account created successfully");
+    showToastMessage();
+    setId("");
+    setPassword("");
+    navigate("/signin");
+  };
+
+
+
+
+  return (
+    <div className="form-container">
+      <h2>Sign Up</h2>
+      <form onSubmit={handleSubmit}>
+        <label>Email:</label>
+        <input
+          type="email"
+          value={id}
+          onChange={(e) => setId(e.target.value)}
+          className="input-field"
+          required={true}
+        />
+        <label>Password:</label>
+        <input
+          type="password"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+          className="input-field"
+          required={true}
+        />
+        <button type="submit" className="submit-button">
+          Sign Up
+        </button>
+      </form>
+    </div>
+  );
+};
+
+export default SignUp;
