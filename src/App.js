@@ -17,13 +17,30 @@ const App = () => {
         <Header />
 
         <Routes>
+<<<<<<< HEAD
           <Route path="/signin" element={<Signin />} />
+          <Route path="/" element={<Main/>} />
         </Routes>
-        <Main />
+        
       </Router>
 
       
+      {/* <div className="cardContainer"> <div style={{backgroundColor:"#ffffff"}} className="card"></div> </div> */}
+
+      
+=======
+          <Route path="/signin" element={<SignIn />} />
+        </Routes>
+        <Routes>
+          <Route path="/register" element={<SignUp />} />
+        </Routes>
+        {user && <Main />}
+        <ToastContainer />
+
+      </Router>
+
       {/* <Signup /> */}
+>>>>>>> d06720d5973a2e6fe3f8a743231ee331fea5e8e6
     </>
   );
 };
