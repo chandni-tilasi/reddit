@@ -3,6 +3,7 @@ import "./Popup.css";
 import { add } from "../../store/PostSlice";
 import { useDispatch } from "react-redux";
 
+
 function Popup() {
   const [clickedSave, setClickedSave] = useState(false);
   const [clickedCancel, setClickedCancel] = useState(false);
@@ -34,13 +35,14 @@ function Popup() {
           }}
         ></textarea>
         <input
-          className="file"
+          className="file" 
           onChange={(e) => {
             setImgVal(e.target.files[0]);
           }}
           type={"file"}
-          placeholder="file"
+         
         />
+         
       </form>
       <div className="btnContainer">
         <button

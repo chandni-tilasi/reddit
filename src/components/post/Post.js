@@ -28,7 +28,7 @@ function Post(props) {
         </span>
       </div>
       <div className="postContainer">
-        <h2>{props.title}</h2>
+        <h3 className="title">{props.title}</h3>
         <img src={props.img} />
       </div>
     </Card>

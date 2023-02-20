@@ -32,6 +32,8 @@
     display: inline;
     padding-right: 5px;
     word-wrap: break-word;
+    text-align: center;
+    /* font-size: 100px; */
     width: 80%;
     /* font-family: 'Oswald', sans-serif; */
 font-family: 'Roboto', sans-serif;
