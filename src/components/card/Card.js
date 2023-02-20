@@ -1,14 +1,18 @@
 import styled, { css } from "styled-components";
-
+import "../main/main.css"
 const Card = styled.article`
-  margin-left: 250px;
-  margin-top: 30px;
+  // margin-left: 250px;
+  // margin-top: 30px;
   height: 80vh;
   width: 60vw;
   display:flex;
-  background-color: #dae0e6;
+  background-color: #ECF2FF;
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  position:relative;
+  border:1px solid gray;
+  
+  
 `;
 
 export default Card;

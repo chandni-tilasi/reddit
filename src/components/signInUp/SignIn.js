@@ -11,6 +11,7 @@ const Signin = () => {
   };
 
   return (
+    <div className="app-container">
     <div className="form-container">
       <h2>Sign In</h2>
       <form onSubmit={handleSubmit}>
@@ -30,6 +31,7 @@ const Signin = () => {
         />
         <button type="submit" className="submit-button">Sign In</button>
       </form>
+    </div>
     </div>
   );
 };

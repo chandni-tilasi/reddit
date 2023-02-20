@@ -1,6 +1,5 @@
 import styled, { css } from "styled-components";
 
-
 // For Avatar ( circular image )
 const Avatar = styled.img`
   cursor: pointer;
@@ -38,6 +37,5 @@ const Avatar = styled.img`
       margin-left: ${props.ml};
     `};
 `;
-
 
 export default Avatar;

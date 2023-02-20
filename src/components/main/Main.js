@@ -9,8 +9,9 @@ import "./main.css";
 import Post from "../post/Post";
 
 const Main = styled.article`
-  width: 100vw;
-  display: flex;
+
+  // width: 100vw;
+  // display: flex;
   ${(props) =>
     props.opacity &&
     css`
@@ -24,7 +25,7 @@ const MainContainer = (props) => {
   // const [upvotes, setUpvotes] = useState(0);
   // const [downvotes, setDownvotes] = useState(0);
   const post = useSelector((state) => state.post);
-  
+
   function clickHandle() {
     seClicked(!clicked);
     // setCancel(false);

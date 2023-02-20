@@ -1,16 +1,17 @@
 .app-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
+    margin-top: 8%;
+    /* height: 100vh; */
   }
   
   .form-container {
+    
     margin: 0 20px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 400px;
+    width: 300px;
   }
   
   .input-field {

@@ -15,6 +15,7 @@ function Post(props) {
   };
 
   return (
+    <div className="cardContainer">
     <Card>
       
 
@@ -29,10 +30,11 @@ function Post(props) {
         </span>
       </div>
       <div className="postContainer">
-        <h2>{props.title}</h2>
+        <h2 className="title">{props.title}</h2>
         <img src={props.img} />
       </div>
     </Card>
+    </div>
   );
 }
 

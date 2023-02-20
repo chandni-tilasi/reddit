@@ -12,12 +12,15 @@ const App = () => {
        
         <Routes>
           <Route path="/signin" element={<Signin />} />
+          <Route path="/" element={<Main/>} />
         </Routes>
-        <Main />
+        
       </Router>
 
       
-      {/* <Signup /> */}
+      {/* <div className="cardContainer"> <div style={{backgroundColor:"#ffffff"}} className="card"></div> </div> */}
+
+      
     </>
   );
 };
