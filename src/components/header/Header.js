@@ -10,6 +10,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { toast } from "react-toastify";
 import { setUserLoggedIn } from "../../store/userSlice";
 
+
 const Div = styled.div`
   display: flex;
   justify-content: space-between;
@@ -37,9 +38,15 @@ const HeaderContainer = () => {
     });
   };
 
+  
+
   return (
     <Header>
+      <div className="logo-container">
       <Logo src={logoImage} alt="Logo" />
+      <h2>reddit</h2>
+      </div>
+      
       <Div>
         {!user ? (
           <Button
@@ -74,6 +81,7 @@ const HeaderContainer = () => {
           </Button>
         )}
         {/* <Avatar src={avatarImage} alt="Avatar" ml={"20px"} /> */}
+        {user&&<Avatar src={avatarImage} alt="Avatar" ml={"20px"} />}
       </Div>
     </Header>
   );

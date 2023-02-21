@@ -2,8 +2,9 @@
 
 .postContainer {
   height: 100%;
-  width: 100%;
+  width: 90%;
   padding: 10px;
+  margin-left: 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,7 +19,6 @@
 .postContainer img {
   width: 70%;
   height: 70%;
-  /* padding: 5% 15% 15% 15%; */
   align-content: center;
 }
 .postContainer .title {
@@ -31,12 +31,8 @@
   word-wrap: break-word;
   text-align: center;
   font-size: 80%;
-  /* font-size: 100px; */
   width: 80%;
-  /* font-family: 'Oswald', sans-serif; */
   font-family: "Roboto", sans-serif;
-  /* font-family: 'Rubik', sans-serif; */
-  /* font-family: 'Source Sans Pro', sans-serif; */
 }
 .upvotes {
   display: flex;
@@ -51,8 +47,7 @@
   /* justify-content: center; */
   position: absolute;
   left: 0;
-  top:8%;
- 
+  top: 8%;
 }
 
 .upvotes span {
@@ -63,6 +58,20 @@
   margin-top: 8%;
   margin-left: 7%;
 }
+
+/* .........header design............ */
+
+.logo-container {
+  display: flex;
+
+}
+
+.logo-container h2 {
+  margin-top: 5px;
+  margin-left: 10px;
+  font-weight: 400;
+}
+
 @media only screen and (max-width: 1011px) {
   .upvotes {
     position: absolute;
@@ -80,22 +89,26 @@
   article {
     margin-top: 30px;
   }
-  .crtContainer{
+  .crtContainer {
     position: absolute;
-    top:7%;
-    left:37%;
+    top: 7%;
+    left: 37%;
     /* display: flex;
     justify-content: center; */
-}
+  }
+  .postContainer {
+    border-style: none;
+    margin-left: 0;
+  }
 }
 
 @media only screen and (max-width: 760px) {
-
-    .crtContainer{
-        position: absolute;
-        top:7%;
-        left:34%;
-        
-    }
+  .crtContainer {
+    position: absolute;
+    top: 7%;
+    left: 34%;
+  }
+  .logo-container h2 {
+    display: none;
+  }
 }
-

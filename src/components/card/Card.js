@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-
+import "../main/main.css"
 const Card = styled.article`
   // margin-left: 250px;
   // margin-top: 30px;
